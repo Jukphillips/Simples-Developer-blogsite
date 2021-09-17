@@ -44,15 +44,16 @@ User.init(
                 return updatedUserData
 
             }
-        }
+        },
 
-
-    },
-      {
-    sequelize: sequelize,
+    sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
     modelName: "user",
-  }
+
+    },
+
 )
+
+module.exports = User;

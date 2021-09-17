@@ -1,16 +1,16 @@
 # Simples-Developer-blogsite
 
 Models
-User
+    User
 username
 password
 id
-Posts
+    Posts
 user_id
 date created
 title
 content
-Comments
+    Comments
 user_id
 post_id
 date created
