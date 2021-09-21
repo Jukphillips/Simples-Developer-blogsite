@@ -22,7 +22,7 @@ router.get('/', async (req, res) =>  {
 
         const userPost = userPostData.map((post) => post.get({plain: true}))
         
-        res.json('homepage', {userPost})
+        res.render("homepage", {userPost})
     
     
     } catch (err) {

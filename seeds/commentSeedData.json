@@ -1,0 +1,26 @@
+[{
+  "id": 1,
+  "comment": "interdum mauris non ligula pellentesque",
+  "user_id": 1,
+  "post_id": 1
+}, {
+  "id": 2,
+  "comment": "quisque arcu libero rutrum ac lobortis vel",
+  "user_id": 2,
+  "post_id": 5
+}, {
+  "id": 3,
+  "comment": "nec nisi vulputate nonummy maecenas tincidunt",
+  "user_id": 3,
+  "post_id": 5
+}, {
+  "id": 4,
+  "comment": "vestibulum velit id pretium iaculis diam erat",
+  "user_id": 4,
+  "post_id": 5
+}, {
+  "id": 5,
+  "comment": "luctus et ultrices",
+  "user_id": 1,
+  "post_id": 3
+}]

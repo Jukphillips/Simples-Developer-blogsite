@@ -1,0 +1,26 @@
+[{
+  "id": 1,
+  "title": "integer ac",
+  "content": "in sapien iaculis congue vivamus metus",
+  "user_id": 1
+}, {
+  "id": 2,
+  "title": "bibendum",
+  "content": "pellentesque eget nunc donec quis",
+  "user_id": 2
+}, {
+  "id": 3,
+  "title": "phasellus",
+  "content": "quisque id justo sit amet sapien",
+  "user_id": 2
+}, {
+  "id": 4,
+  "title": "nonummy maecenas",
+  "content": "auctor gravida sem praesent",
+  "user_id": 1
+}, {
+  "id": 5,
+  "title": "amet",
+  "content": "feugiat et eros",
+  "user_id": 4
+}]
