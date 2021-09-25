@@ -2,7 +2,6 @@ const id = []
 
 
 const loginFormHandler = async (event) => {
-  console.log("why isn't it working")
   event.preventDefault();
 
   const username = document.querySelector("#username-login").value.trim();
@@ -40,7 +39,7 @@ const signupFormHandler = async (event) => {
 
     if (response.ok) {
       document.location.replace("/");
-      console.log('You sucessfully logged in!')
+      console.log('You sucessfully signed up!')
     } else {
       alert("Failed to sign up.");
     }
@@ -55,7 +54,6 @@ const logout = async () => {
 
   if (response.ok) {
     document.location.replace("/");
-    console.log('logged out')
   } else {
     alert("Failed to log out.");
   }
@@ -87,7 +85,6 @@ const newPost = async (event) => {
 
 
 const updateYourPost = async (event) => {
-  console.log("connected")
   event.preventDefault();
 
 
@@ -108,12 +105,28 @@ const updateYourPost = async (event) => {
 
     if(response.ok){
     document.location.replace('/')
-    console.log("You sucessfully submitted a new Post!")
+    console.log("You sucessfully updated this Post!")
   } else {
     alert("Failed to update your post!")
   }
   }
 
+}
+
+const deletePost = async (event) => {  
+  if (event.target.hasAttribute('data-id')) {
+    const id = event.target.getAttribute('data-id');
+
+    const response = await fetch(`/api/post/${id}`, {
+        method: 'DELETE'
+    })
+
+    if (response.ok) {
+  document.location.replace("/dashboard") } 
+
+  }
+  
+  
 }
 
 const commentPost = async (event) => {
@@ -138,9 +151,9 @@ const commentPost = async (event) => {
 
     if(response.ok){
     document.location.replace(`/api/post/${post_id}`)
-    console.log("You sucessfully submitted a new Post!")
+    console.log("You sucessfully submitted a new comment!")
   } else {
-    alert("Failed to update your post!")
+    alert("Failed to comment!")
   }
   }
 }
@@ -174,4 +187,9 @@ if(updatePost){ updatePost.addEventListener("click", updateYourPost)}
 var commentNewPost = document.querySelector("#commentPostBtn")
 if(commentNewPost){
   commentNewPost.addEventListener("click", commentPost )
+}
+
+var deletePostEvent = document.querySelector("#deletePostBtn")
+if(deletePostEvent){
+  deletePostEvent.addEventListener("click", deletePost)
 }

@@ -6,7 +6,7 @@ router.get("/", async (req, res) => {
     if(!req.session.loggedIn){
         res.redirect("/user")
     } else {
-        console.log(req.session)
+    
     const myUserData = await Post.findAll({
         where: {
             user_id: req.session.username.id
@@ -22,16 +22,17 @@ router.get("/", async (req, res) => {
 
     
 
-    console.log(userPost)
     res.render('dashboard', {userPost, loggedIn: req.session.loggedIn} )
 
 
 }})
 
 router.get('/post', async (req, res) => {
-
+    if(!req.session.loggedIn){
+        res.render("login")
+    } else {
     res.render('newPost')
-
+    }
 })
 
 

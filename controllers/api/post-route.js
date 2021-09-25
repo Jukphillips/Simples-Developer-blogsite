@@ -10,7 +10,6 @@ router.post('/', async (req, res) => {
             user_id: req.session.username.id
         })
 
-        console.log(createNewPost)
         res.status(200).json(createNewPost)
 
     } catch (err) {
@@ -27,9 +26,8 @@ router.get('/updatePost/:id', async (req, res) =>{
         const updateYourPostQuery = await Post.findByPk(req.params.id)
         const updateYourPost = await updateYourPostQuery.get({plain: true})
 
-        console.log(updateYourPost)
 
-        res.render("updatePost", {updateYourPost})
+        res.render("updatePost", {updateYourPost, loggedIn: req.session.loggedIn})
 
     } catch (err) {
         console.log(err)
@@ -53,7 +51,6 @@ router.put('/updatePost', async (req, res) => {
             }
         })
 
-        console.log(createNewPost)
         res.status(200).json(createNewPost)
 
     } catch (err) {
@@ -91,6 +88,25 @@ router.get("/:id", async (req, res) => {
     }
 
 }})
+
+router.delete("/:id", async (req, res) => {
+  try {
+    const postData = await Post.destroy({
+      where: {
+        id: req.params.id,
+      },
+    });
+
+    if (!postData) {
+      res.status(404).json({ message: "No post found!" });
+      return;
+    }
+
+    res.status(200).render("dashboard", {loggedIn: req.session.loggedIn});
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
 
 
 module.exports = router;

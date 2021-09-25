@@ -65,9 +65,8 @@ try {
         res.status(400).send('Incorrect email or password. Please try again!')
     }
 
-        console.log(dbUserData)
+
     const userObject = {username: dbUserData.username, id: dbUserData.id}
-    console.log(userObject)
     // if validpassword returns true then the user is logged in
     req.session.save(() => {
         req.session.loggedIn = true;

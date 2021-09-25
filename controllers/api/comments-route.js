@@ -3,7 +3,6 @@ const { Comment } = require("../../models/index");
 
 
 router.post("/", async (req, res) => {
-    console.log("we're in!")
 
     try {
     
