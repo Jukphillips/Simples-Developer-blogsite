@@ -4,6 +4,8 @@
 
 ## Deployed Link
 
+https://intense-sierra-28750.herokuapp.com/
+
 ## Description
 
 This application is designed to allow developers to interact with each other and share tips for the rest of their peers. User's are required to make an account to access full functionality of the webiste, outside of viewing post made by other users. Once logged in, users have access to a dashboard that shows all previous posts and gives them the option to create a new post. Finally, when a logged in user clicks on a post they can then view all comments made on that post and even make one themselves!
@@ -28,7 +30,7 @@ HTML5, CSS3, Javascript, RESTful API, Node.js, Express.js, MySQL, Sequelize ORM,
 
 ## Usage
 
-If the user wishes to user broader functionality make sure to signup! You can do this easily by visiting the login page.
+If the user wishes to use broader functionality make sure to signup! You can do this easily by visiting the login page.
 
 ## License
 
