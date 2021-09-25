@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { User, Post, Comment} = require('../models/index')
+const sequelize = require("sequelize")
 
 //gets all Post/ homepage
 router.get('/', async (req, res) =>  {
@@ -7,7 +8,10 @@ router.get('/', async (req, res) =>  {
     try {
 
         const userPostData = await Post.findAll({
-
+            // attributes: [
+            //     [sequelize.fn('date_format', sequelize.col('date_col'), '%Y-%m-%d'), 'date_col_formed']
+            // ],
+            
             include: [
                 {model: User, 
                 attributes: ["username", "id"]
@@ -20,9 +24,12 @@ router.get('/', async (req, res) =>  {
 
         })
 
-        const userPost = userPostData.map((post) => post.get({plain: true}))
         
-        res.render("homepage", {userPost})
+        const userPost = userPostData.map((post) => post.get({plain: true}))
+
+
+        
+        res.render("homepage", {userPost, loggedIn: req.session.loggedIn})
     
     
     } catch (err) {

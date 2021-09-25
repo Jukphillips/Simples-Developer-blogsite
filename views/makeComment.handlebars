@@ -1,0 +1,28 @@
+
+<div class="personalcard">
+    <header id="personalHeader">
+        <a id="title" class="inline" href="">
+            <h4 id="title"> {{post.title}} </h4>
+        </a>
+        <p class="inline" id="dateCreated"> Posted by {{post.user.username}} on {{post.createdAt}} </p>
+    </header>
+    <h6 id="content">
+        {{post.content}}
+    </h6>
+</div>
+
+{{#each post.comments as |comments|}}
+{{>comments}}
+{{/each}}
+
+
+<div id="commentPost">
+    <div data-id="{{post.id}}" id="commentPostSpace">
+        <h4 data-id="{{post.id}}"> Comment</h4>
+        <textarea data-id="{{post.id}}" class="textarea" id='commentcontentInput'></textarea>
+        <button data-id="{{post.id}}" id="commentPostBtn"> Create </button>
+    </div>
+ </div>
+</div>
+
+

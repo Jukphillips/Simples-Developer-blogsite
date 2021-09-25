@@ -17,3 +17,170 @@
   margin: 5px;
   border-radius: 5px;
 }
+
+.navbar {
+  margin-bottom: 25px;
+}
+
+.personalcard {
+  margin: 50px;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: 5px 0px 10px;
+  border: 1px solid #343a40;
+}
+
+#personalHeader {
+  flex-direction: row;
+  border-bottom: 1.5px solid #343a40;
+}
+
+#title {
+  text-decoration: none;
+  color: black;
+}
+
+.inline {
+  display: inline-block;
+}
+
+#dateCreated,
+#loginContainer button {
+  float: right;
+}
+
+#content {
+  margin: 7px;
+}
+
+#loginContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  margin-top: 7%;
+}
+
+.loginStyle {
+  padding: 20px;
+  box-shadow: 5px 0px 10px;
+}
+
+#logout {
+  text-decoration: none;
+  background: none;
+  border: none;
+  margin: 0;
+  padding: 0;
+  display: block;
+  padding: 0.5rem 1rem;
+  color: #fff;
+  font-size: 1rem;
+}
+
+.yourPost {
+  text-decoration: none;
+  background-color: #343a40;
+  color: white;
+  display: flex;
+  margin: 20px;
+  width: 95%;
+}
+
+.createPost {
+  padding: 0.5rem 1rem;
+}
+
+#myPostCreatedby {
+  padding-left: 60%;
+}
+
+#createPostBtn {
+  margin: 20px;
+  text-decoration: none;
+  padding: 2px 6px;
+  border: black;
+  background-color: #343a40;
+  color: white;
+  font-size: 20px;
+  width: 15%;
+  display: flex;
+  position: fixed;
+  bottom: 8%;
+  left: 41.5%;
+  flex-direction: row;
+  justify-content: center;
+}
+
+#aYourPost {
+  text-decoration: none;
+}
+
+#newPost {
+  border-radius: 2px;
+  margin-top: 5%;
+  margin-left: 8%;
+  width: 80%;
+  box-shadow: 7px 0px 10px;
+}
+
+#newPostH3 {
+  background-color: #343a40;
+  color: white;
+  margin: 0;
+  font-size: 2.5rem;
+}
+#newPostSpace {
+  padding: 2.5%;
+  border: 1px solid rgb(99, 99, 99);
+  background-color: rgb(230, 230, 230);
+}
+
+.textarea {
+  width: 80%;
+  border: 2px solid rgb(185, 222, 236);
+}
+
+#titleInput {
+  margin-right: 10%;
+}
+
+#contentInput {
+  height: 180px;
+}
+
+#newPostBtn,
+#updatePostBtn,
+#commentPostBtn {
+  display: block;
+  margin-top: 5px;
+  text-decoration: none;
+  padding: 2px 6px;
+  border: black;
+  background-color: #343a40;
+  color: white;
+  width: 80%;
+  border-radius: 4px;
+  font-size: 20px;
+}
+
+#commentPost,
+#recentComments {
+  margin-top: 5%;
+  margin-left: 3.6%;
+  width: 92.95%;
+  box-shadow: 7px 0px 10px;
+}
+
+#commentcontentInput {
+  height: 75px;
+  width: 90%;
+}
+
+#commentPostSpace,
+#recentComments {
+  padding: 1%;
+  border: 1px solid rgb(99, 99, 99);
+  margin-bottom: 5%;
+}
