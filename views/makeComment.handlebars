@@ -17,10 +17,10 @@
 
 
 <div id="commentPost">
-    <div data-id="{{post.id}}" id="commentPostSpace">
-        <h4 data-id="{{post.id}}"> Comment</h4>
-        <textarea data-id="{{post.id}}" class="textarea" id='commentcontentInput'></textarea>
-        <button data-id="{{post.id}}" id="commentPostBtn"> Create </button>
+    <div id="commentPostSpace" data-id={{post.id}} >
+        <h4 data-id={{post.id}}> Comment</h4>
+        <textarea  class="textarea" id='commentcontentInput' data-id={{post.id}}></textarea>
+        <button  id="commentPostBtn"data-id={{post.id}}> Create </button>
     </div>
  </div>
 </div>

@@ -82,7 +82,6 @@ router.get("/:id", async (req, res) => {
 
         const post = postQuery.get({plain: true})                                                                                              
 
-        console.log(post)
         
         res.render("makeComment", {post, loggedIn: req.session.loggedIn})
 
@@ -93,11 +92,5 @@ router.get("/:id", async (req, res) => {
 
 }})
 
-router.post("/api/comment/:id", async (req, res) => {
-
-    console.log(req.body)
-
-
-})
 
 module.exports = router;

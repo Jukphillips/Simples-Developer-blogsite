@@ -1,11 +1,12 @@
 const router = require('express').Router();
-const {Comment} = require("../../models/index")
+const { Comment } = require("../../models/index");
 
-router.post("/:id", async (req, res) => {
-    console.log("in here")
-    console.log(req.session.username)
+
+router.post("/", async (req, res) => {
+    console.log("we're in!")
+
     try {
-
+    
 
         const createNewComment = await Comment.create({
             comment: req.body.contentComment,
@@ -13,7 +14,6 @@ router.post("/:id", async (req, res) => {
             user_id: req.session.username.id
         })
 
-        console.log(createNewComment)
         res.status(200).json(createNewComment)
 
 

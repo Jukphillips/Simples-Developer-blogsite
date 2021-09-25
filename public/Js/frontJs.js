@@ -121,18 +121,22 @@ const commentPost = async (event) => {
 
   const contentComment = document.querySelector("#commentcontentInput").value.trim()
   if(event.target.hasAttribute("data-id")){
-   const post_id = (event.target.getAttribute("data-id"))
+    
+   const post_id = event.target.getAttribute("data-id")
   
 
 
   if(contentComment && post_id){
-    const response = await fetch(`api/comment/${post_id}`, {
-      method: "POST",
+    
+    const response = await fetch('/api/comment', {
+      method: "Post",
       body: JSON.stringify({contentComment, post_id}),
-      headers: {"Content-Type": "application/json"}
-    } )
+      headers: {"Content-Type": "application/json"},
+    }).catch (error => {
+      console.log(error)
+    })
 
-        if(response.ok){
+    if(response.ok){
     document.location.replace(`/api/post/${post_id}`)
     console.log("You sucessfully submitted a new Post!")
   } else {
